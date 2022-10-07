@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+form{
+    width: 40px;
+    margin: 5vh 0px 0px 500px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.register h3{
+    text-align: center;
+    background: #364351;
+    width: 100%;
+    padding: 5px 0;
+    border-radius: 3px 3px 0 0;
+    color: white;
+  font-size:2em;
+}
+
+.form-outline{
+    display: block;
+    color: #000;
+    margin: 20px;
+    padding: 5px;
+
+  }
+
+.form-outline .allInup{
+    display: block;
+    padding: 10px;
+}
+.form-outline .allInup input{
+    display: block;
+    padding: 7px 10p;
+}
+
+
+  #myForm {
+    font-family:'Open Sans Condensed', sans-serif;
+    width: 400px;
+    min-width:300px;
+    margin: 40px auto;
+    position: relative;
+     }
+
+     #myForm button [submit] {
+        cursor:pointer;
+        width:100%;
+        border:none;
+        background:#991D57;
+        background-image:linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+        background-image:-moz-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+        background-image:-webkit-linear-gradient(bottom, #8C1C50 0%, #991D57 52%);
+        color:#FFF;
+        margin:0 0 5px;
+        padding:10px;
+        border-radius:5px; 
+     }
+  
+
+body{
+    background: #dfdfdf
+    
+}
+
+
+
+/* form{
+    @include bm(400px, $bm-dp: $fl);
+    @include flex-center($cw);
+        div, label, input, textarea{
+            @include bm(100%)
+        }
+} */
+
+label, [placeholder]{
+    @include tf(#555)
+}
+
+
+/* .field:focus-within label{
+     tf(#000, $tf-ls: 2px)
+} */
+
+input{
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.radio{
+    display: flex;
+    gap: 6px;
+}
+
+.form-fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input, textarea{
+    background: rgba(255,255,255,.5);
+       
+}
+
+.button{
+    margin-left: 8rem;
+    margin-top: 5PX;
+    padding: 5px;
+    color: #fff;
+    
+}
+
+.button input{
+    padding: 10px 30px;
+    background-color: #19be0a;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid green;
+    
+}
+
+
+* {
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+ }
