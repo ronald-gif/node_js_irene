@@ -1,12 +1,22 @@
 // Dependencies
 const express = require('express');
+const path = require('path')
+
 
 // instantiations
 const app = express();
 
 // configurations
+app.set('view engine', 'pug')
+app.set('views', path.join(__dirname, 'views'))
+app.set('views', './views')
+
 
 // middleware
+app.use(express.static(path.join(__dirname, 'public')));
+// for uoloaded images
+app.use('/public/uploads', express.static(__dirname + '/public/uploads'))
+
 
 // Simple request time logger
 app.use((req, res, next) => {
@@ -94,6 +104,20 @@ app.post("/sign", (req, res) => {
   res.redirect("/");
 });
 
+
+// rendering pug files
+app.get("/register", (req, res) => {
+  res.render('registeration')
+});
+
+app.get("/contact", (req, res) => {
+  res.render('contact-us')
+});
+
+app.post("/register", (req, res) => {
+  console.log(req.body);
+  res.redirect("/");
+})
 
   // For invalid routes
 app.get('*', (req, res) => {

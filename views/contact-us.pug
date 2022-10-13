@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Contacts
+  link(rel='icon' type='image/x-icon' href='/images/favicon.ico')
+  link(rel="stylesheet", href="/mycss/main.css")
+  link(rel="stylesheet", href="/bootstrap-5.2.0-dist/css/bootstrap.css")
+
+.contacts
+  .container
+    .row
+      .col-2
+      .col
+        .color-section
+          .contact-us
+            h2 Contact us
+      .col-2
+.details-of-how-to-contact
+  .container
+    .row
+      .col-6
+        .call-us
+          .reach-us
+            h3 Call us directly on
+            h5 +256776452454
+      .col-6
+        .call
+          .reach-us
+            h3 Email us on
+            h5 ufarmmasajja@gmail.com
+.simple-form
+  .container
+    .row
+      .col
+      .col
+        .form-message
+          h4 Send us a message below 
+          form#myform-message(action='' name='myform-message' method='post')
+            .out-line-form
+              label(for='' id='') Name:
+              input#fname(type='text' name='fname')
+              small#error
+            .out-line-form
+              label(for='' id='') Phone number:
+              input#phone-number(type='text' name='phone-number')
+              small#error
+            .out-line-form
+              label(for='' id='') Message:
+              textarea(name='' id='' cols='30' rows='10')
+              small#error
+      .col
+
+script(src='/bootstrap-5.2.0-dist/js/bootstrap.bundle.js')
