@@ -1,0 +1,148 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UFarm
+  link(rel='icon' type='image/x-icon' href='../public/images/android-chrome-192x192.png')
+  //- link(rel='stylesheet' href='/public/bootstrap-5.2.0-dist/css/styles/main.css')
+  link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+  link(rel='stylesheet' href='../public/mycss/farmerone.css')
+  
+  
+  
+
+nav.navbar.navbar-expand-lg
+  .container-fluid
+    a.navbar-brand(href='index.html#')
+      img(src='/public/images/onlinelogomaker-091022-1346-6665.png' alt='')
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.me-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/index.html' style='color: #fff;') Home
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='about-us.html' style='color: #fff;') About us
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+            | Categories
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href='/horticulture.html') Horticuture
+            li
+              a.dropdown-item(href='/poultry.html') Poultry
+            li
+              a.dropdown-item(href='/dairy.html') Dairy
+// farmerOne registration
+.myform1
+  h3 farmerOne registration
+  form#myFormToRegister(action='/' name='registration')
+    .container.thisForm
+      .row.mb-4
+        .col
+          #error1.form-outline
+            label.form-label(for='form3Example1') First name:
+            input#firstName.firstName(type='text' name='firstname')
+            small.error
+        .col
+          #error2.form-outline
+            label.form-label(for='form3Example1') Second name:
+            input#secondname.secondName(type='text' name='secondname')
+            small.error
+        .col
+          #error3.form-outline
+            label.form-label(for='form3Example1') Phone number:
+            input#telephone.telephone(type='text' name='telephone')
+            small.error
+      .row.mb-4
+        .col
+          #error5.form-outline
+            label.form-label(for='currentDate')  Current date:
+            input#currentDate.currentDate(type='date' name='currentdate')
+        .col
+          #error6.form-outline
+            label.form-label(for='exampleInputEmail1') Date of birth:
+            input#DOB.DOB(type='date' name='dateofbirth' style='padding-right: 5px;')
+            small.error
+        .col
+          #error4.form-outline
+            label.form-label(for='form3Example1') Unique number/ID:
+            input#uniquenumber.uniqueNumber(type='text' name='uniquenumber')
+            small.error
+      .row.mb-4
+        .col
+          .form-outline
+            label.form-label(for='exampleInputPassword1') NIN Number:
+            input#NIN.NIN(type='text' name='nin')
+            small.error
+        .col
+          .form-outline
+            label.form-label(for='form3Example1') Location:
+            input#location.location(type='text' name='location')
+            small.error
+        .col
+          .form-outline
+            label.form-label(for='form3Example1') Residence type:
+            select#my_ward.values-for-wards(name='residence')
+              option(value='permanent') Permanent
+              option(value='temporary') Temporary
+      .row.mb-4
+        .col
+          .form-outline
+            label.form-label(for='exampleInputPassword1') Password:
+            input#NIN.NIN(type='text' name='password')
+            small.error
+        .col
+          .form-outline
+            label.form-label(for='form3Example1') Confirm Password:
+            input#location.location(type='text' name='confirmpassword')
+            small.error
+        .col
+          .form-outline
+            label.form-label(for='form3Example1') Direction to your home:
+            input#direction.direction(type='text')
+            small.error
+      .row.mb-4
+        .col
+          .form-outline
+            label.form-label(for='form3Example1') Years spent in masajja :
+            input#yearsspent.yearsspent(type='text' name='yearsspent')
+            small.error
+        .col
+          .form-outline.form-o
+            label(for='gender') Gender:
+            select#my_ward.values-for-wards(name='ward')
+              option(value='male') Male
+              option(value='female') Female
+        .col-4
+          .form-outline.form-o
+            label(for='ward') Ward:
+            select#my_ward.values-for-wards(name='ward')
+              option(value='ward1') LC1
+              option(value='ward2') LC2
+              option(value='ward3') LC3
+              option(value='ward4') LC4
+      .row.mb-4
+        .col
+          .form-outline.radio
+            label(for='lang') Activities:
+            .radio
+              input#mobile(type='checkbox' name='Luganda' value='language')
+              span Mobilization
+              input#supervise(type='checkbox' name='english' value='language')
+              span Supervision
+              input#regulate(type='checkbox' name='english' value='language')
+              span Regulation
+              input#support(type='checkbox' name='english' value='language')
+              span Support
+              small.error
+      .row.mb-4
+        .col
+          .mb-3.form-check
+            input#exampleCheck1.form-check-input(type='checkbox')
+            label.form-check-label(for='exampleCheck1') Comfirm
+          .fo-signup
+            button.btn-1(type='submit') Submit
+script(src='/public/bootstrap-5.2.0-dist/js/bootstrap.bundle.js')
+script(src='/public/myjavascript/script.js')

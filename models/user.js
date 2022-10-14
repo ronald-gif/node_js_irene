@@ -1,28 +1,21 @@
 const mongoose = require('mongoose');
+const passportlocalmongoose = require('passport-local-mongoose')
 
 const userSchema = new mongoose.Schema({
-    register: {
-        type: String,
-        required: true,
-        trim:true
-    },
-
     fullname: {
         type: String,
         required: true,
         trim: true
     },
-
     email: {
         type: String,
         required: true,
         trim: true
     },
-
     uniquenumber: {
         type: String,
         required: true,
-        trim: trim
+        trim: true
     },
     gender: {
         type: String,
@@ -35,7 +28,14 @@ const userSchema = new mongoose.Schema({
     },
     role: {
        type: String,
-       required
+       required: true
     },
     
 })
+
+// what a user will use to login == uniquenumber
+userSchema.plugin(passportlocalmongoose, {
+    usernameField: 'uniquenumber'
+})
+// collection for users in db = Registration
+module.exports = mongoose.model('Registration', userSchema)

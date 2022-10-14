@@ -1,0 +1,148 @@
+
+*{
+    margin: opx;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+     border:none;
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: .2s linear;
+  }
+
+  :root{
+    --pink:#e84393;
+    --green:#3db83a;
+}
+
+
+  .navbar-nav li a{
+    color: #fff;
+  }
+
+
+  .navbar{
+    background-color:var(--green);
+    color: #fff;
+}
+
+.navbar .navbar-nav li a{
+    color: #fff;
+    background-color:var(--green) ;
+}
+
+  .buttonlogin{
+    padding: 10px;
+  }
+
+  .btn{
+    color: #fff;
+    background-color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: 15%;
+  }
+
+  .btn:hover{
+    background-color: var(--green);
+    border: 1px solid var(--green);
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+/* registration starts here */
+.myform1{
+    background: linear-gradient(136deg, hsla(340, 97%, 67%, 0.65), hsla(230,96%, 62%,0.65)),
+             url('/images/img-1.jpg');
+  }
+  .myform1 h3{
+    font-size: 20px;
+    margin: 0px auto;
+    padding: 10px auto;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+  
+  }
+  .thisForm{
+    margin-top: 10px;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 7px 7px 7px 7px rgba(0, 0, 0, 0.3);
+    width: 800px;
+  }
+  
+  .thisForm h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .firstLinks a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000;
+    font-weight: 800;
+  }
+  .allLinks{
+    margin: 0px 20px 1px 30px;
+    padding: 0px 50px 2px 50px;
+  }
+  .form-outline{
+    margin-bottom: 1px;
+  }
+  
+  .form-outline label {
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  
+  
+  .form-outline select{
+    border: solid 2px #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+  }
+  .radio{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 10px;
+    
+  }
+  .form-outline select option{
+    padding: 10px;
+  }
+  .form-outline input{
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    color: #000;
+    padding: 8px;
+  }
+  
+  .form-outline:focus{
+   outline: none;
+  }
+  
+  .btn-1{
+    background-color: var(--pink);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+  
+  .error{
+    color: red;
+    font-size: 9px;
+    margin-top: -4px;
+  }

@@ -4,8 +4,6 @@ const path = require('path')
 const mongoose = require('mongoose')
 const config = require('./config/db')
 const passport = require('passport')
-
-
 //express sesssion
 const expressSession = require('express-session')({
     secret: 'secretRonald',
@@ -13,6 +11,8 @@ const expressSession = require('express-session')({
     saveUninitialized: false, 
 });
 
+// import the user model
+const Registration = require('./models/user')
 
 // importing route file
 const registrationRoutes = require('./routes/registerRoutes')
@@ -43,6 +43,8 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 // middleware
+// To parse URL encoded data
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 // for uoloaded images
 app.use('/public/uploads', express.static(__dirname + '/public/uploads'))
@@ -51,11 +53,15 @@ app.use(expressSession)
 // passport configuration middleware
 app.use(passport.initialize());
 app.use(passport.session());
+// for authentication
+passport.use(Registration.createStrategy())
+// 
+passport.serializeUser(Registration.serializeUser())
+passport.deserializeUser(Registration.deserializeUser())
 
 
 
-// To parse URL encoded data
-app.use(express.urlencoded({ extended: false }));
+
 
 // routes
 // req stands for request and res stands for ressponse
@@ -63,7 +69,7 @@ app.use(express.urlencoded({ extended: false }));
 // app.method(path, handler)
 // methods: get, post, delete, put(edit, update)
 
-app.use('/user', registrationRoutes)
+app.use('/', registrationRoutes)
 
 
   // For invalid routes
